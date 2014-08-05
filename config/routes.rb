@@ -1,4 +1,5 @@
 EvalApp::Application.routes.draw do
+  resources :users
   root "users#index"
   get "users/index"
   get "users/create"
