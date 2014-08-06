@@ -1,12 +1,13 @@
 <% provide(:title, 'Users') %>
 <div class="row">
   <h1>Welcome to the User portal</h1>
+  <p>Add or view any user in our database. Now with absolutely no privacy!</p>
 </div>
 <div class="row">
   <ul>
     <% @users.each do |user| %>
-      <li><%= user.name %></li>
+      <li>
+        <%= link_to user.name, user_path(user) %></li>
     <% end %>
   </ul>
 </div>
-<p>Add or view any user in our database. Now with absolutely no privacy!</p>
