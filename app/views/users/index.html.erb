@@ -3,6 +3,9 @@
   <h1>Welcome to the User portal</h1>
   <p>Add or view any user in our database. Now with absolutely no privacy!</p>
 </div>
+<div class = "row">
+  <%= link_to("Create a New User", create_path) %>
+</div>
 <div class="row">
   <ul>
     <% @users.each do |user| %>

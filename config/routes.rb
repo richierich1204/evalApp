@@ -1,9 +1,8 @@
 EvalApp::Application.routes.draw do
   resources :users
   root "users#index"
-  get "users/index"
-  get "users/create"
-  get "users/show"
+  match '/create', to: 'users#create', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
