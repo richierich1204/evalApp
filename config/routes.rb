@@ -1,5 +1,10 @@
 EvalApp::Application.routes.draw do
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships, only: [:create, :destroy]
   root "users#index"
   match '/new', to: 'users#new', via: 'get'
 
